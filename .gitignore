@@ -1,0 +1,30 @@
+# ---- 编译产物 ----
+*.exe
+*.o
+*.obj
+*.a
+*.dll
+
+# ---- 运行时生成的数据与报表（含随机测试数据，不入库）----
+code/data.txt
+code/log.txt
+code/stock_report.txt
+code/bench_hour.log
+code/bench_report.txt
+code/server_run.log
+data.txt
+log.txt
+
+# ---- 编辑器 / IDE ----
+.vscode/
+.idea/
+*.swp
+
+# ---- 系统 ----
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---- 文档临时文件（Word 打开 docx 时会生成）----
+~$*.docx
+~$*.doc
