@@ -16,7 +16,10 @@ data.txt
 log.txt
 
 # ---- 编辑器 / IDE ----
-.vscode/
+# 所有 .vscode 目录的内容默认忽略（launch/c_cpp_properties/settings 里含本机绝对路径），
+# 仅放行可移植的 code/.vscode/tasks.json（用 ${workspaceFolder}，无绝对路径）
+**/.vscode/*
+!code/.vscode/tasks.json
 .idea/
 *.swp
 

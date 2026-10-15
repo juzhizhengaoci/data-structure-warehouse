@@ -213,9 +213,13 @@ typedef struct {
 
 ```bat
 cd code
-build.bat          :: 或双击运行，或 VS Code 按 Ctrl+Shift+B
+build.bat          :: 或双击运行
 run.bat            :: 运行 app.exe
 ```
+
+> 想在 VS Code 里按 `Ctrl+Shift+B` 编译：**必须用 VS Code 打开 `code/` 目录**（不是仓库根目录），
+> 才会读到随仓库提供的 `code/.vscode/tasks.json`。打开仓库根目录是读不到的。
+> 其余三个 `.vscode` 配置文件含本机绝对路径，未入库。
 
 或手动编译：
 
@@ -266,6 +270,7 @@ start_web.bat      :: 启动后浏览器访问 http://localhost:8123
     ├── main.c                  ⑤ 控制层：程序入口与菜单
     ├── webserver.c  webui.html Web 版（原生 socket HTTP 服务 + 前端页面）
     ├── bench.c                 并发压测工具
+    ├── .vscode/tasks.json      VS Code 编译任务（可移植，已入库）
     ├── build.bat  run.bat      控制台版编译 / 运行
     └── build_web.bat  start_web.bat   Web 版编译 / 运行
 ```
